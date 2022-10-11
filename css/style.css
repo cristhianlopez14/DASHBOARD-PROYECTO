@@ -9610,6 +9610,7 @@ a {
   transition: all .2s ease;
   z-index: 5; }
   .nav-header .logo-abbr {
+    display:none;
     max-width: 52px; }
     @media only screen and (max-width: 575px) {
       .nav-header .logo-abbr {
@@ -9646,7 +9647,7 @@ a {
         justify-content: center; } }
   .nav-header .brand-title {
     margin-left: 10px;
-    max-width: 120px;
+    max-width: 160px;
     margin-top: 0px; }
     [data-theme-version="dark"] .nav-header .brand-title {
       background-position: 0 120%; }
