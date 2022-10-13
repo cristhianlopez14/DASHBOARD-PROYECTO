@@ -9646,7 +9646,7 @@ a {
         padding-right: 0;
         justify-content: center; } }
   .nav-header .brand-title {
-    margin-left: 10px;
+    margin-left: 0px;
     max-width: 160px;
     margin-top: 0px; }
     [data-theme-version="dark"] .nav-header .brand-title {
@@ -10108,10 +10108,10 @@ svg.pulse-svg {
       .header-right .notification_dropdown .nav-link.success [fill] {
         fill: #2BC155; }
     .header-right .notification_dropdown .nav-link i {
-      font-size: 24px; }
+      font-size: 32px; }
       @media only screen and (max-width: 1400px) {
         .header-right .notification_dropdown .nav-link i {
-          font-size: 18px; } }
+          font-size: 24px; } }
     @media only screen and (max-width: 1400px) {
       .header-right .notification_dropdown .nav-link svg {
         width: 24px;
@@ -12308,6 +12308,10 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
             margin-right: 0;
             line-height: 1;
             padding: 0; } }
+          #icono{
+            font-size: 1.1rem;
+            margin-bottom: 1px;
+          }
         @media only screen and (max-width: 767px) {
           .deznav .metismenu > li a > i {
             font-size: 1.25rem;
@@ -24707,7 +24711,7 @@ button {
     outline: 0 !important; }
   @media only screen and (max-width: 1400px) {
     .btn {
-      padding: 0.625rem 1rem;
+      padding: 0.725rem 1.5rem;
       font-size: 0.813rem; } }
   .btn-transparent {
     background-color: transparent; }
@@ -25008,7 +25012,6 @@ button {
 .shadow.btn-secondary {
   -webkit-box-shadow: 0 5px 15px 0 rgba(160, 44, 250, 0.2) !important;
   box-shadow: 0 5px 15px 0 rgba(160, 44, 250, 0.2) !important; }
-
 .shadow.btn-warning {
   -webkit-box-shadow: 0 5px 15px 0 rgba(255, 188, 17, 0.2) !important;
   box-shadow: 0 5px 15px 0 rgba(255, 188, 17, 0.2) !important; }
@@ -25039,6 +25042,10 @@ button {
       font-size: 0.75rem;
       padding: 0.25rem 0.5rem;
       font-weight: 500; } }
+
+.btn-xs.btn-toggle{
+  font-size: 1rem;
+}
 
 .btn-sm, .btn-group-sm > .btn {
   font-size: 0.813rem  !important;
@@ -27993,7 +28000,6 @@ table.dataTable thead .sorting {
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
     transition: all 0.5s;
-    background: #F4F5F9;
     margin-left: auto; }
     @media only screen and (max-width: 1600px) {
       .plan-list .list-row .play-button {
@@ -28050,9 +28056,6 @@ table.dataTable thead .sorting {
     background: #57b846; }
     .plan-list .list-row:hover .info h4 a, .plan-list .list-row:hover .info span {
       color: #fff !important; }
-    .plan-list .list-row:hover .play-button {
-      color: #fff;
-      background: #FFBC11; }
     .plan-list .list-row:hover .more-button {
       background: rgba(255, 255, 255, 0.3); }
       .plan-list .list-row:hover .more-button svg path {
