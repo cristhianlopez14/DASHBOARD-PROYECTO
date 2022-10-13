@@ -879,8 +879,8 @@
                                     </div>
 
                                     <div class="custom-control custom-checkbox mb-3 check-xs mt-3">
-                                        <input type="checkbox" class="custom-control-input" id="customCheckBox6" required>
-                                        <label class="custom-control-label" for="customCheckBox6">Mostrar Usuarios inactivos</label>
+                                        <input type="checkbox" class="custom-control-input" id="mostrar" required>
+                                        <label class="custom-control-label" for="">Mostrar Usuarios inactivos</label>
                                     </div>
                                     <table id="example5" class="display min-w850">
                                         <thead>
@@ -900,7 +900,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr id="tablerow">
 												<td>
 													<div class="custom-control custom-checkbox">
 														<input type="checkbox" class="custom-control-input" id="customCheckBox3" required="">
@@ -912,10 +912,7 @@
                                                 <td>cmartinez@gmail.com</td>
 												<td>Administrador</td>
                                                 <td>
-													<span class="badge light badge-warning">
-														<i class="fa fa-circle text-warning mr-1"></i>
-														Inactivo
-													</span>
+													<span class="badge light badge-warning" id="estado"><i class="fa fa-circle text-warning mr-1"></i>Inactivo</span>
 												</td>
                                                 <td>
 													<div class="d-flex">
@@ -924,7 +921,7 @@
 													</div>
 												</td>
                                             </tr>
-                                            <tr>
+                                            <tr id="tablerow">
 												<td>
 													<div class="custom-control custom-checkbox">
 														<input type="checkbox" class="custom-control-input" id="customCheckBox4" required="">
@@ -936,7 +933,7 @@
                                                 <td>robertosuarez@hotmail.com</td>
                                                 <td>Admin del hogar</td>
                                                 <td>
-													<span class="badge light badge-success">
+													<span class="badge light badge-success" id="estado">
 														<i class="fa fa-circle text-success mr-1"></i>
 														Activo
 													</span>
@@ -1130,6 +1127,51 @@
 			});
 		});
 	</script>
+
+	<script>
+		var checkbox = document.getElementById('mostrar');
+		var row = document.querySelectorAll('#tablerow');
+		var estado = document.querySelectorAll('#estado');
+
+		checkbox.addEventListener("click",mostrar)
+		
+		if (checkbox.checked==false) {
+			for (let index = 0; index < estado.length; index++) {
+				if (estado[index].textContent=="Inactivo") {
+				for (let index = 0; index < row.length; index++) {
+					if (estado[index].textContent=="Inactivo") {
+					row[index].setAttribute('style','display:none');
+					}
+				}
+				}
+				console.log(estado[index].textContent)
+			}
+		}
+		
+		function mostrar(){
+			if (checkbox.checked==true) {
+				for (let index = 0; index < estado.length; index++) {
+				if (estado[index].textContent=="Inactivo") {
+					for (let index = 0; index < row.length; index++) {
+					if (estado[index].textContent=="Inactivo") {
+						row[index].setAttribute('style','display:');
+					}
+					}
+				}
+				}
+			}else if (checkbox.checked==false){
+				for (let index = 0; index < estado.length; index++) {
+				if (estado[index].textContent=="Inactivo") {
+					for (let index = 0; index < row.length; index++) {
+					if (estado[index].textContent=="Inactivo") {
+						row[index].setAttribute('style','display:none');
+					}
+					}
+				}
+				}
+			}
+		}
+  	</script>
 
     <!-- Datatable -->
     <script src="./vendor/datatables/js/jquery.dataTables.min.js"></script>
