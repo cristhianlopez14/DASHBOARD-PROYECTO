@@ -12649,7 +12649,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
       padding: 0 0 0 20px; } }
 [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header {
   width: 5rem;
-  z-index: 999; }
+   }
   [data-sidebar-style="full"][data-layout="vertical"] .menu-toggle .nav-header .brand-logo {
     padding-left: 0;
     padding-right: 0;
